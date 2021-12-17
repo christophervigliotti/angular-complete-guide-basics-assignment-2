@@ -98,4 +98,24 @@ run "ng help".
 Did you mean "serve"?
 parallels@ubuntu-linux-20-04-desktop:~/Documents/Code/basics-assignment-2$ 
 
-### 
+### following along with https://update.angular.io/?v=11.0-13.0 
+...but first...
+- deleted package.json.lock (file name may not be correct)
+- committed changes to repo
+
+#### npx @angular/cli@12 update @angular/core@12 @angular/cli@12
+The installed local Angular CLI version is older than the latest stable version.
+Installing a temporary version to perform the update.
+Installing packages for tooling via npm.
+Installed packages for tooling via npm.
+Using package manager: 'npm'
+Collecting installed dependencies...
+Found 30 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+                  Package "@angular-devkit/build-angular" has an incompatible peer dependency to "@angular/compiler-cli" (requires "^13.0.0 || ^13.1.0-next" (extended), would install "12.2.15").
+                  Package "@angular-devkit/build-angular" has an incompatible peer dependency to "typescript" (requires ">=4.4.3 <4.6", would install "4.3.5").
+✖ Migration failed: Incompatible peer dependencies found.
+Peer dependency warnings when installing dependencies means that those dependencies might not work correctly together.
+You can use the '--force' option to ignore incompatible peer dependencies and instead address these warnings later.
+  See "/tmp/ng-uRg1L5/angular-errors.log" for further details.
