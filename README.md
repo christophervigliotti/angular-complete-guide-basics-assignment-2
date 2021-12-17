@@ -119,3 +119,9 @@ Package '@angular/core' is already up to date.
 Peer dependency warnings when installing dependencies means that those dependencies might not work correctly together.
 You can use the '--force' option to ignore incompatible peer dependencies and instead address these warnings later.
   See "/tmp/ng-uRg1L5/angular-errors.log" for further details.
+
+#### npm update --force
+
+blech
+
+#### npx @angular/cli@12 update @angular/core@12 @angular/cli@12
