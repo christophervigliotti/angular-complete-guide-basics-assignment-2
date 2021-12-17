@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  allowAddUsername = false;
   username = '';
   onUsernameUpdate(event: any){
-    console.log('Username: ' + event.target.value);
-    this.username = (<HTMLInputElement>event.target).value;
+    var usernameValue = (<HTMLInputElement>event.target).value;
+    // console.log('Username: ' + event.target.value);
+    console.log(usernameValue.length);
+    this.username = usernameValue;
+    this.allowAddUsername = (usernameValue.length > 0)?true:false;
+  }
+
+  onUpdateUserButtonClick(){
+    this.username = '';
   }
 }

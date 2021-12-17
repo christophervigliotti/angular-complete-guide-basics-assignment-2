@@ -6,8 +6,8 @@
   <li>Add a button which may only be clicked if the username is NOT an empty string</li>
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
-<h2>Step 1</h2>
-<label for="username">Username</label>
+<h2>My Work</h2>
+<label for="username">Step 1: Username</label>
 <br />
 <input 
   type="text" 
@@ -15,3 +15,14 @@
   id="username" 
   (input)="onUsernameUpdate($event)"
 />
+<br />
+Step 2: Username: {{username}}
+<br />
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowAddUsername" 
+    (click)="onUpdateUserButtonClick()"
+>
+    Add User
+</button>
+<hr />
