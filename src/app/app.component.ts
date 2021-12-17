@@ -1,27 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  // properties
   allowAddUsername = false;
   username = '';
-  onUsernameUpdate(event: any){
-    var usernameValue = (<HTMLInputElement>event.target).value; // good practice to declare var here or just to use this scope?
-    // console.log('Username: ' + event.target.value);
-    // console.log(usernameValue.length);
-    this.username = usernameValue;
-    this.addUserButtonStateHandler(usernameValue);
+  userCreationStatus = 'no user created...yet';
+
+  //methods 
+  constructor() {
   }
 
-  onUpdateUserButtonClick(){
-    this.username = '';
-    this.addUserButtonStateHandler('');
+  ngOnInit(): void {
   }
 
-  addUserButtonStateHandler(usernameValue){
-    this.allowAddUsername = (usernameValue.length > 0)?true:false;
+  onCreateUser(){
+    console.log('onCreateUser()');
+    this.userCreationStatus = 'User "' + this.username + '" created.';    
+  }
+
+  onUpdateUsername(event: any){
+    console.log('onUpdateUsername()' + event.target.value);
+    this.username = (<HTMLInputElement>event.target).value; 
   }
 }
