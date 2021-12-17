@@ -1,0 +1,19 @@
+<label>Username</label>
+(34)
+<input 
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="userName"
+/>
+<br />
+
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewUser" 
+    (click)="onCreateUser()"
+>
+    Add Server
+</button>
+
+<h3>onCreateUser()</h3>
+<p>userCreationStatus: {{userCreationStatus}}</p>

@@ -7,22 +7,4 @@
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
 <h2>My Work</h2>
-<label for="username">Username</label>
-<br />
-<input 
-  type="text" 
-  class="form-control"
-  ([(ngModel)]="username"
-/>
-<br />
-username: {{username}}
-<br />
-userCreationStatus: {{userCreationStatus}}
-<button 
-    class="btn btn-primary" 
-    [disabled]="!allowAddUsername" 
-    (click)="onUpdateUsername()"
->
-    Add User
-</button>
-<hr />
+<div app-user>app-user as a div attribute!</div>
