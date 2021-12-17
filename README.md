@@ -1,27 +1,101 @@
-# MyFirstApp
+# wat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+## Overview
 
-## Development server
+Assignment 2
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## getting this code running (before completing the assignment)
 
-## Code scaffolding
+### ng serve...
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Error: An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'
+Require stack:
+- /usr/lib/node_modules/@angular/cli/node_modules/@angular-devkit/architect/node/node-modules-architect-host.js
+- /usr/lib/node_modules/@angular/cli/node_modules/@angular-devkit/architect/node/index.js
+- /usr/lib/node_modules/@angular/cli/models/architect-command.js
+- /usr/lib/node_modules/@angular/cli/commands/serve-impl.js
+- /usr/lib/node_modules/@angular/cli/node_modules/@angular-devkit/schematics/tools/export-ref.js
+- /usr/lib/node_modules/@angular/cli/node_modules/@angular-devkit/schematics/tools/index.js
+- /usr/lib/node_modules/@angular/cli/utilities/json-schema.js
+- /usr/lib/node_modules/@angular/cli/models/command-runner.js
+- /usr/lib/node_modules/@angular/cli/lib/cli/index.js
+- /usr/lib/node_modules/@angular/cli/lib/init.js
+See "/tmp/ng-mk0LOC/angular-errors.log" for further details.
 
-## Build
+### ng update...
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The installed local Angular CLI version is older than the latest stable version.
+Installing a temporary version to perform the update.
+✔ Package successfully installed.
+Using package manager: 'npm'
+Collecting installed dependencies...
+Found 0 dependencies.
+    We analyzed your package.json, there are some packages to update:
+    
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cli                       11.0.7 -> 12.2.9         ng update @angular/cli@12
+      @angular/core                      11.0.9 -> 12.2.9         ng update @angular/core@12
+    
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
 
-## Running unit tests
+### ng update @angular/cli@12
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The installed local Angular CLI version is older than the latest stable version.
+Installing a temporary version to perform the update.
+✔ Package successfully installed.
+Using package manager: 'npm'
+Collecting installed dependencies...
+Found 0 dependencies.
+Package '@angular/cli' is not a dependency.
 
-## Running end-to-end tests
+### ng update @angular/core@12
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+same as previous message
 
-## Further help
+### ng serve (no bueno)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### ng update (no bueno, same error)
+
+### npm install @angular/core@12
+
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: my-first-app@0.0.0
+npm ERR! Found: zone.js@0.10.3
+npm ERR! node_modules/zone.js
+npm ERR!   zone.js@"~0.10.2" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer zone.js@"~0.11.4" from @angular/core@12.2.15
+npm ERR! node_modules/@angular/core
+npm ERR!   @angular/core@"12" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /home/parallels/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/parallels/.npm/_logs/2021-12-17T14_27_03_223Z-debug.log
+parallels@ubuntu-linux-20-04-desktop:~/Documents/Code/basics-assignment-2$ 
+
+### npm install @angular/core@12 -- force
+
+### npm audit fix --force
+
+### ng serve
+
+Your global Angular CLI version (13.0.1) is greater than your local version (11.0.7). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+The specified command ("server") is invalid. For a list of available options,
+run "ng help".
+
+Did you mean "serve"?
+parallels@ubuntu-linux-20-04-desktop:~/Documents/Code/basics-assignment-2$ 
+
+### 
