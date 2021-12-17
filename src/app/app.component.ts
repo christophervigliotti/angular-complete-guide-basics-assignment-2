@@ -9,14 +9,19 @@ export class AppComponent {
   allowAddUsername = false;
   username = '';
   onUsernameUpdate(event: any){
-    var usernameValue = (<HTMLInputElement>event.target).value;
+    var usernameValue = (<HTMLInputElement>event.target).value; // good practice to declare var here or just to use this scope?
     // console.log('Username: ' + event.target.value);
-    console.log(usernameValue.length);
+    // console.log(usernameValue.length);
     this.username = usernameValue;
-    this.allowAddUsername = (usernameValue.length > 0)?true:false;
+    this.addUserButtonStateHandler(usernameValue);
   }
 
   onUpdateUserButtonClick(){
     this.username = '';
+    this.addUserButtonStateHandler('');
+  }
+
+  addUserButtonStateHandler(usernameValue){
+    this.allowAddUsername = (usernameValue.length > 0)?true:false;
   }
 }
