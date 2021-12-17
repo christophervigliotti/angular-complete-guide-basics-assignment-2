@@ -6,32 +6,28 @@ import {FormsModule} from '@angular/forms';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
   // properties
   allowNewUser = false;
-  userCreationStatus = 'No user was created...sorry, Charlie!'; // (30)
-  userName = '(34) this is the default value of userName ';
+  userCreationStatus = 'User not created.'; // (30)
+  userName = '';
 
   //methods 
   constructor() {
-    setTimeout(
-      () => {
-        this.allowNewUser = true;
-      }, 
-      2000
-    );
-   }
+  }
+
   ngOnInit(): void {
   }
 
-  // (30)
   onCreateUser(){
-    this.userCreationStatus = 'User "' + this.userName + '" was created. Nice work, yo.';
+    this.userCreationStatus = 'User "' + this.userName + '" was created.';
+    this.userName = '';
   }
 
-  // (32)
   onUpdateUserName(event: any){
     this.userName = (<HTMLInputElement>event.target).value;
+    // this.allowNewUser = (this.userName.length > 0)?true:false;
   }
 
 }

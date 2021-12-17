@@ -1,5 +1,4 @@
 <label>Username</label>
-(34)
 <input 
     type="text" 
     class="form-control" 
@@ -9,11 +8,11 @@
 
 <button 
     class="btn btn-primary" 
-    [disabled]="!allowNewUser" 
+    [disabled]="userName === ''" 
     (click)="onCreateUser()"
 >
-    Add Server
+    Add User
 </button>
 
-<h3>onCreateUser()</h3>
 <p>userCreationStatus: {{userCreationStatus}}</p>
+<p>userName: {{userName}}</p>
